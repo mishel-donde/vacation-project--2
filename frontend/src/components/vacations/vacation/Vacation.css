@@ -1,0 +1,207 @@
+/* Main container for a single vacation card */
+.Vacation {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Hover effect for vacation card */
+.Vacation:hover {
+  transform: translateY(-6px);
+}
+
+/* Vacation title area */
+.Vacation h3 {
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: rgb(11, 32, 86);
+  margin: 0;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+/* Image container */
+.vacation-image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Vacation image itself */
+.vacation-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+/* Zoom effect on hover */
+.Vacation:hover .vacation-image img {
+  transform: scale(1.05);
+}
+
+/* Vacation dates section */
+.vacation-dates {
+  padding: 15px 15px 5px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* Description below the image */
+.vacation-description {
+  padding: 0 15px 15px;
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+/* Price highlight */
+.vacation-price {
+  padding: 0 15px 15px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+/* Admin action buttons (edit/delete) */
+.vacation-actions {
+  display: flex;
+  border-top: 1px solid var(--border-color);
+  margin-top: auto;
+}
+
+/* Style for both buttons */
+.vacation-actions button {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+/* Edit button */
+.vacation-actions button:first-child {
+  background-color: #f8f9fa;
+  color: var(--text-color);
+  border-right: 1px solid var(--border-color);
+}
+
+/* Delete button */
+.vacation-actions button:last-child {
+  background-color: #f8f9fa;
+  color: var(--error-color);
+}
+
+/* Hover effect for admin buttons */
+.vacation-actions button:hover {
+  background-color: #e9ecef;
+}
+
+/* Image placeholder fallback */
+.placeholder {
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder {
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Follow/Unfollow button */
+.follow-button {
+  background-color: #ffffff;
+  border: 1px solid #dadce0;
+  border-radius: 20px;
+  color: #3c4043;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+
+/* When user is following */
+.follow-button.following {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+}
+
+/* Follow button hover */
+.follow-button.following:hover {
+  background-color: #dbe5fb;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+}
+
+.follow-button:hover {
+  background-color: #f1f3f4;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+}
+
+.follow-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Followers count style */
+.followers-count {
+  color: #70757a;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Overlay confirmation for deletion */
+.delete-confirm-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  z-index: 10;
+}
+
+/* Confirmation buttons wrapper */
+.confirm-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Cancel button */
+.cancel-button {
+  padding: 8px 16px;
+  background-color: #999;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Delete confirmation button */
+.confirm-delete-button {
+  padding: 8px 16px;
+  background-color: #b00020;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

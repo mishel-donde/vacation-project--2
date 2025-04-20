@@ -1,0 +1,52 @@
+.Loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom right, #fef9f3, #ffe7c7);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.Loading img {
+  animation: pulse 1.2s infinite ease-in-out;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.1));
+}
+
+/* Sizes */
+.Loading .small {
+  width: 24px;
+}
+
+.Loading .medium {
+  width: 48px;
+}
+
+.Loading .large {
+  width: 96px;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

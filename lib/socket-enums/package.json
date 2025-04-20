@@ -1,0 +1,17 @@
+{
+  "name": "socket-enums-mishel",
+  "version": "1.2.0",
+  "description": "",
+  "main": "./dist/socket-enums.js",
+  "types": "./dist/socket-enums.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}

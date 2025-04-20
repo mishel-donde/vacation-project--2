@@ -1,0 +1,46 @@
+/* Layout Styles */
+.Layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: linear-gradient(to bottom, #fffdf7, #f0f9ff);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+header {
+  background-color: #ffffff;
+  padding: 15px 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid #f4f4f4;
+}
+
+/* Main Content */
+main {
+  padding: 40px 25px;
+}
+
+/* Footer */
+footer {
+  background-color: #f3fbff;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.9rem;
+  color: #5a5a5a;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  main {
+    padding: 25px 15px;
+  }
+
+  header {
+    padding: 12px 18px;
+  }
+
+  footer {
+    padding: 15px;
+  }
+}
