@@ -1,0 +1,162 @@
+/* Main container for vacation list */
+.Vacations {
+  margin: 20px 0;
+}
+
+/* Top-right controls for admin (Add, Stats) */
+.admin-controls {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+/* Grid of vacation cards */
+.vacations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  width: 100%;
+}
+
+/* Pagination section */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  gap: 10px;
+}
+
+.pagination-pages {
+  display: flex;
+  gap: 5px;
+}
+
+/* Pagination button */
+.pagination-btn {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: #e2e6ea;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Highlight current page */
+.pagination-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* Filter panel container */
+.filter-controls {
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  /* box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05); */
+  box-shadow: 0 4px 12px rgba(81, 70, 70, 0.06);
+  border: 1px solid #f0f0f0;
+}
+
+/* Title above filters */
+.filter-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  /* color: var(--primary-color); */
+  color: #3f2b96;
+}
+
+/* Container for all filter options */
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Individual filter option */
+.filter-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.filter-option:hover {
+  transform: translateY(-2px);
+}
+
+.filter-option input {
+  margin-right: 6px;
+}
+
+.filter-option span {
+  font-size: 0.9rem;
+}
+
+/* Admin buttons (Add New / View Stats) */
+.add-btn,
+.stats-btn {
+  display: inline-block;
+  /* background-color: var(--primary-color); */
+  /* color: rgb(27, 21, 85); */
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  background: linear-gradient(135deg, #f0e9ff, var(--primary-color));
+  color: #f5a865;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.add-btn:hover,
+.stats-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Specific styling for stats button */
+.stats-btn {
+  background-color: #374f5c;
+}
+
+.stats-btn:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive layout: tablets */
+@media (max-width: 992px) {
+  .vacations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive layout: mobile */
+@media (max-width: 768px) {
+  .vacations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Small screens: center admin buttons */
+@media (max-width: 576px) {
+  .admin-controls {
+    justify-content: center;
+  }
+}
